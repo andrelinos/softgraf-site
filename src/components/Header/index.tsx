@@ -44,7 +44,7 @@ export function Header() {
                     <li>CONTATO</li>
                 </ul>
             ) : (
-                <span onClick={handleMenuMobileOpen}></span>
+                <span onClick={handleMenuMobileOpen}>
                     MENU
                     <button className={styles.btOpenMenu}>
                         <GiHamburgerMenu
