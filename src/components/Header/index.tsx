@@ -24,6 +24,12 @@ export function Header() {
         setMenuMobile(true);
     }
 
+    function handleMenuMobileClose() {
+        setMenuMobile(false);
+    }
+
+    console.log(menuMobile);
+
     return (
         <div className={styles.container}>
             <span className={styles.logo}>
@@ -38,9 +44,9 @@ export function Header() {
                     <li>CONTATO</li>
                 </ul>
             ) : (
-                <span>
+                <span onClick={handleMenuMobileOpen}></span>
                     MENU
-                    <button onClick={() => {}} className={styles.btOpenMenu}>
+                    <button className={styles.btOpenMenu}>
                         <GiHamburgerMenu
                             size={32}
                             color={'var( --primary-color)'}
@@ -51,7 +57,10 @@ export function Header() {
             {menuMobile && (
                 <div className={styles.menuMobile}>
                     <span>
-                        <button onClick={() => {}} className={styles.btClose}>
+                        <button
+                            onClick={handleMenuMobileClose}
+                            className={styles.btClose}
+                        >
                             <CgClose size={44} color={'var(--color-white)'} />
                         </button>
                     </span>
