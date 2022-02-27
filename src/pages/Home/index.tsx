@@ -45,11 +45,12 @@ export function Home() {
                         <span>Gráficas</span>
                     </div>
                 </div>
+                <button>Veja todas as soluções</button>
             </section>
             <section className={styles.default}>
-                <div>
-                    <span>LOGO</span>
-                    <span>Depoimentos</span>
+                <div className={styles.testimonial}>
+                    <span className={styles.logo}>LOGO</span>
+                    <span className={styles.title}>Depoimentos</span>
                     <p>
                         "Desde a fundação da Sellerink, em 1995, nosso sistema
                         de informática é o CromoSystem da Softgraf. Com o passar

@@ -13,11 +13,7 @@ export function Header() {
     const { width } = useWindowDimensions();
 
     useEffect(() => {
-        if (width <= 768) {
-            setIsWideScreen(false);
-        } else {
-            setIsWideScreen(true);
-        }
+        setIsWideScreen(width > 768);
     }, [width]);
 
     function handleMenuMobileOpen() {
@@ -28,7 +24,7 @@ export function Header() {
         setMenuMobile(false);
     }
 
-    console.log(menuMobile);
+    console.log(isWideScreen);
 
     return (
         <div className={styles.container}>
@@ -36,13 +32,13 @@ export function Header() {
                 <img src="../../assets/logo.png" />
             </span>
             {isWideScreen ? (
-                <ul className={styles.menuWide}>
-                    <li>HOME</li>
-                    <li>A SOFTGRAF</li>
-                    <li>SOLUÇÕES</li>
-                    <li>SUPORTE</li>
-                    <li>CONTATO</li>
-                </ul>
+                <menu className={styles.menuWide}>
+                    <a href="#">HOME</a>
+                    <a href="#">A SOFTGRAF</a>
+                    <a href="#">SOLUÇÕES</a>
+                    <a href="#">SUPORTE</a>
+                    <a href="#">CONTATO</a>
+                </menu>
             ) : (
                 <span onClick={handleMenuMobileOpen}>
                     MENU

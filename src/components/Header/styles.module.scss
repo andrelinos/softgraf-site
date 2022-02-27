@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
 
     .logo {
@@ -16,12 +16,20 @@
         }
     }
 
-    ul.menuWide {
+    menu.menuWide {
         display: flex;
         justify-content: space-evenly;
 
-        li + li {
-            margin-left: 2rem;
+        a {
+            color: var(--text-color-dark);
+
+            + a {
+                margin-left: 2rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
