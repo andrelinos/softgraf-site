@@ -36,7 +36,7 @@ export const imageSlider = [
     },
     {
         id: 6,
-        title: 'DEIXE A TECNOLOGIA FAZER O TRABALHO PESADO EM QUANDO VOCÊ ORQUESTRA CADA DETALHE',
+        title: 'SUPORTE TÉCNICO ON-LINE, DISPONÍVEL PARA SUA EMPRESA',
         url: 'the boss',
         image: './assets/slider-img/vitrines-06.jpg',
         text: "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
