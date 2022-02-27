@@ -1,5 +1,6 @@
 import { Header } from '../../components/Header';
 import { Slider } from '../../components/Slider';
+import { Testimonial } from '../../components/Testimonial';
 
 import styles from './styles.module.scss';
 
@@ -49,45 +50,55 @@ export function Home() {
             </section>
             <section className={styles.default}>
                 <div className={styles.testimonial}>
-                    <span className={styles.logo}>LOGO</span>
-                    <span className={styles.title}>Depoimentos</span>
-                    <p>
-                        "Desde a fundação da Sellerink, em 1995, nosso sistema
-                        de informática é o CromoSystem da Softgraf. Com o passar
-                        dos anos, o sistema foi customizado, ampliado e
-                        diversificado para atender a todas as nossas
-                        necessidades, desde a área técnica até a administrativa,
-                        financeira e comercial. Temos uma ferramenta completa,
-                        que nos ajuda na gestão e no aperfeiçoamento do nosso
-                        negócio, a partir de completos registros e relatórios
-                        gerenciais. Além disso, temos à disposição um suporte
-                        técnico de alto nível e analistas que entendem
-                        rapidamente a necessidade de customização, fazendo com
-                        que nosso sistema esteja sempre atualizado
-                        tecnologicamente e disponível em diversas plataformas."
-                    </p>
-                    <span>
-                        GILBERTO LAVIERO ( DIRETOR ) – “VERTI PRODUTOS QUIMICOS
-                        LTDA.”
-                    </span>
+                    <Testimonial />
                 </div>
+                <div className={styles.defaultItems}>
+                    <div>
+                        <span>
+                            <img
+                                src="./assets/images/professional.png"
+                                alt="Profissionais capacitado"
+                            />
+                        </span>
+                        <h2>Profissionais capacitados</h2>
+                    </div>
+                    <div>
+                        <span>
+                            <img
+                                src="./assets/images/tech.png"
+                                alt="Tecnologia de ponta"
+                            />
+                        </span>
+                        <h2>Tecnologia de ponta</h2>
+                    </div>
+                    <div>
+                        <span>
+                            <img
+                                src="./assets/images/support.png"
+                                alt="Suporte Técnico"
+                            />
+                        </span>
+                        <h2>Suporte Técnico</h2>
+                    </div>
+                    <div>
+                        <span>
+                            <img
+                                src="./assets/images/flexible.png"
+                                alt="Flexibilidade"
+                            />
+                        </span>
+                        <h2>Flexibilidade</h2>
+                    </div>
+                </div>
+            </section>
+            <section className={styles.contact}>
                 <div>
-                    <div>
-                        <span>IMAGE</span>
-                        <span>Profissionais capacitados</span>
-                    </div>
-                    <div>
-                        <span>IMAGE</span>
-                        <span>Tecnologia de ponta</span>
-                    </div>
-                    <div>
-                        <span>IMAGE</span>
-                        <span>Suporte Técnico</span>
-                    </div>
-                    <div>
-                        <span>IMAGE</span>
-                        <span>Flexibilidade</span>
-                    </div>
+                    <h2>Solicite um orçamento</h2>
+                    <p>
+                        Nossos especialistas estão aptos e prontos para
+                        personalizar um orçamento para você.
+                    </p>
+                    <button>Veja mais</button>
                 </div>
             </section>
         </div>

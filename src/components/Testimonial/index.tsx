@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 
-import { imageSlider } from '../../services/api/slider-data';
+import { testimonialSlider } from '../../services/api/slider-testimonial';
 
 import styles from './styles.module.scss';
 
@@ -11,11 +11,7 @@ export function Testimonial() {
 
     const isFadingRef = useRef(false);
 
-    // updated all setValue to updateValue
-    // this will fadeOut the element and after 0.5s
-    // update the value
     const updateValue = (_value: number) => {
-        // only alow to update while element is not fading
         if (isFadingRef.current === false) {
             isFadingRef.current = true;
             setFadeClass(styles.mFadeOut);
@@ -32,9 +28,9 @@ export function Testimonial() {
         // allow value to be updated
         isFadingRef.current = false;
 
-        if (imageSlider.length) {
+        if (testimonialSlider.length) {
             const interval = setInterval(() => {
-                if (value < imageSlider.length - 1) {
+                if (value < testimonialSlider.length - 1) {
                     // using updateValue instead of setValue
                     updateValue(value + 1);
                 } else {
@@ -52,11 +48,11 @@ export function Testimonial() {
         if (value > 0) {
             updateValue(value - 1);
         } else {
-            updateValue(imageSlider.length - 1);
+            updateValue(testimonialSlider.length - 1);
         }
     }
     function ImageForward() {
-        if (value < imageSlider.length - 1) {
+        if (value < testimonialSlider.length - 1) {
             updateValue(value + 1);
         } else {
             updateValue(0);
@@ -65,28 +61,31 @@ export function Testimonial() {
 
     return (
         <div className={styles.container}>
+            <span className={styles.logo}>
+                <img
+                    className={[styles.loadImage, styles.image, fadeClass].join(
+                        ' '
+                    )}
+                    src={`${testimonialSlider[value].logo}`}
+                    alt={`${testimonialSlider[value].id}`}
+                />
+            </span>
+            <div className={[styles.information].join(' ')}>
+                <span className={styles.title}>Depoimentos</span>
+                <p
+                    className={styles.text}
+                    max-lines={2}
+                >{`${testimonialSlider[value].text}`}</p>
+                <span className={styles.userTitle}>
+                    {`${testimonialSlider[value].title}`}
+                </span>
+            </div>
             <span
                 className={[styles.left, styles.buttons].join(' ')}
                 onClick={ImagePrevious}
             >
                 <MdArrowForwardIos />
             </span>
-            <img
-                className={[styles.loadImage, styles.image, fadeClass].join(
-                    ' '
-                )}
-                src={`${imageSlider[value].image}`}
-                alt={`${imageSlider[value].id}`}
-            />
-            <div className={[styles.information].join(' ')}>
-                <span className={styles.title}>
-                    {`${imageSlider[value].title}`}
-                </span>
-                <p
-                    className={styles.text}
-                    max-lines={2}
-                >{`${imageSlider[value].text}`}</p>
-            </div>
             <span
                 className={[styles.right, styles.buttons].join(' ')}
                 onClick={ImageForward}

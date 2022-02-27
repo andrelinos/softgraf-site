@@ -10,9 +10,15 @@ export function Footer() {
                 <span>Rua João Peixoto Viegas, 169 - Conjunto 06</span>
                 <span>Interlagos - São Paulo/SP</span>
             </div>
-            <div className={styles.contact}>
+            <div className={styles.copyright}>
                 <span>TODOS OS DIREITOS RESERVADOS - 2018</span>
-                <span>Andrelino Silva</span>
+                <a
+                    href="https://andrelino.dev"
+                    target="_blank"
+                    title="andrelino.dev"
+                >
+                    Andrelino Silva
+                </a>
             </div>
         </div>
     );
