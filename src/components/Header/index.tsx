@@ -28,48 +28,53 @@ export function Header() {
 
     return (
         <div className={styles.container}>
-            <span className={styles.logo}>
-                <img src="../../assets/logo.png" />
-            </span>
-            {isWideScreen ? (
-                <menu className={styles.menuWide}>
-                    <a href="#">HOME</a>
-                    <a href="#">A SOFTGRAF</a>
-                    <a href="#">SOLUÇÕES</a>
-                    <a href="#">SUPORTE</a>
-                    <a href="#">CONTATO</a>
-                </menu>
-            ) : (
-                <span onClick={handleMenuMobileOpen}>
-                    MENU
-                    <button className={styles.btOpenMenu}>
-                        <GiHamburgerMenu
-                            size={32}
-                            color={'var( --primary-color)'}
-                        />
-                    </button>
+            <div className={styles.content}>
+                <span className={styles.logo}>
+                    <img src="../../assets/logo.png" />
                 </span>
-            )}
-            {menuMobile && (
-                <div className={styles.menuMobile}>
-                    <span>
-                        <button
-                            onClick={handleMenuMobileClose}
-                            className={styles.btClose}
-                        >
-                            <CgClose size={44} color={'var(--color-white)'} />
+                {isWideScreen ? (
+                    <menu className={styles.menuWide}>
+                        <a href="#">HOME</a>
+                        <a href="#">A SOFTGRAF</a>
+                        <a href="#">SOLUÇÕES</a>
+                        <a href="#">SUPORTE</a>
+                        <a href="#">CONTATO</a>
+                    </menu>
+                ) : (
+                    <span onClick={handleMenuMobileOpen}>
+                        MENU
+                        <button className={styles.btOpenMenu}>
+                            <GiHamburgerMenu
+                                size={32}
+                                color={'var( --primary-color)'}
+                            />
                         </button>
                     </span>
+                )}
+                {menuMobile && (
+                    <div className={styles.menuMobile}>
+                        <span>
+                            <button
+                                onClick={handleMenuMobileClose}
+                                className={styles.btClose}
+                            >
+                                <CgClose
+                                    size={44}
+                                    color={'var(--color-white)'}
+                                />
+                            </button>
+                        </span>
 
-                    <ul>
-                        <li>HOME</li>
-                        <li>A SOFTGRAF</li>
-                        <li>SOLUÇÕES</li>
-                        <li>SUPORTE</li>
-                        <li>CONTATO</li>
-                    </ul>
-                </div>
-            )}
+                        <ul>
+                            <li>HOME</li>
+                            <li>A SOFTGRAF</li>
+                            <li>SOLUÇÕES</li>
+                            <li>SUPORTE</li>
+                            <li>CONTATO</li>
+                        </ul>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

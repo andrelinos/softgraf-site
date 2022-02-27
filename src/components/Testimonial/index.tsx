@@ -61,24 +61,33 @@ export function Testimonial() {
 
     return (
         <div className={styles.container}>
+            <h1 className={styles.title}>Depoimentos</h1>
+
             <span className={styles.logo}>
                 <img
                     className={[styles.loadImage, styles.image, fadeClass].join(
                         ' '
                     )}
-                    src={`${testimonialSlider[value].logo}`}
-                    alt={`${testimonialSlider[value].id}`}
+                    src={testimonialSlider[value].logo}
+                    alt={testimonialSlider[value].client}
                 />
             </span>
             <div className={[styles.information].join(' ')}>
-                <span className={styles.title}>Depoimentos</span>
-                <p
-                    className={styles.text}
-                    max-lines={2}
-                >{`${testimonialSlider[value].text}`}</p>
-                <span className={styles.userTitle}>
-                    {`${testimonialSlider[value].title}`}
-                </span>
+                <p className={styles.text} max-lines={2}>
+                    {testimonialSlider[value].text}
+                </p>
+                {testimonialSlider[value].url ? (
+                    <a
+                        href={testimonialSlider[value].url}
+                        className={styles.userTitle}
+                    >
+                        {`${testimonialSlider[value].client}`}
+                    </a>
+                ) : (
+                    <span className={styles.userTitle}>
+                        {`${testimonialSlider[value].client}`}
+                    </span>
+                )}
             </div>
             <span
                 className={[styles.left, styles.buttons].join(' ')}

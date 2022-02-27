@@ -12,6 +12,7 @@
     position: relative;
     vertical-align: center;
     background: rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
 
     flex-direction: column;
 
@@ -20,11 +21,14 @@
         height: 12.5rem;
         border-radius: 50%;
         overflow: hidden;
+        border: 5px solid var(--tertiary-color);
+        padding: 5px;
 
         .image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
             opacity: 1;
         }
     }
@@ -83,9 +87,9 @@
     width: 100%;
     height: 300px;
     padding: 0 2rem;
-
+    margin-top: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -94,7 +98,7 @@
     font-size: 1.5rem;
     color: var(--primary-color);
     text-shadow: #fff 0.1em 0.1em 0.2em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     overflow: hidden;
     text-align: center;
     height: 4rem;

@@ -1,102 +1,107 @@
 .container {
     flex: 1;
     width: 100%;
-    max-width: 1200px;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--tertiary-color);
 
-    .logo {
-        img {
-            max-height: 80px;
-        }
-    }
-
-    menu.menuWide {
+    .content {
+        flex: 1;
+        width: 100%;
+        max-width: 1200px;
+        height: 120px;
         display: flex;
-        justify-content: space-evenly;
-
-        a {
-            color: var(--text-color-dark);
-
-            + a {
-                margin-left: 2rem;
-            }
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    > span {
-        display: flex;
+        justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
+        padding: 1rem 2rem;
 
-        font-size: 0.9rem;
-        font-weight: 300;
-
-        .btOpenMenu {
-            width: 44px;
-            height: 44px;
-            border: none;
-            background: none;
+        .logo {
+            img {
+                max-height: 80px;
+            }
         }
-    }
 
-    .menuMobile {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        width: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        background: rgba(0, 0, 0, 0.95);
-        color: var(--color-white);
-        z-index: 99;
-
-        span {
-            width: 100%;
-            height: 100px;
+        menu.menuWide {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 3rem 2rem 1rem;
+            justify-content: space-evenly;
 
-            .btClose {
-                width: 55px;
-                background: none;
-                border: 0;
+            a {
+                color: var(--text-color-dark);
+
+                + a {
+                    margin-left: 2rem;
+                }
 
                 &:hover {
-                    background: red;
+                    text-decoration: underline;
                 }
             }
         }
 
-        ul {
+        > span {
+            display: flex;
+            align-items: center;
+
+            font-size: 0.9rem;
+            font-weight: 300;
+
+            .btOpenMenu {
+                width: 44px;
+                height: 44px;
+                border: none;
+                background: none;
+            }
+        }
+
+        .menuMobile {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 0;
+            bottom: 0;
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            line-height: 3;
-            padding: 2rem;
+            justify-content: flex-end;
+            background: rgba(0, 0, 0, 0.95);
+            color: var(--color-white);
+            z-index: 99;
 
-            li {
-                margin-left: 2rem;
-                font-size: 1.2rem;
-                font-weight: 400;
+            span {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 3rem 2rem 1rem;
+
+                .btClose {
+                    width: 55px;
+                    background: none;
+                    border: 0;
+
+                    &:hover {
+                        background: red;
+                    }
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 3;
+                padding: 2rem;
+
+                li {
+                    margin-left: 2rem;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
             }
         }
     }
