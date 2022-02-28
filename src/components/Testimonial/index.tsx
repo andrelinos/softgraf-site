@@ -80,12 +80,14 @@ export function Testimonial() {
                     <a
                         href={testimonialSlider[value].url}
                         className={styles.userTitle}
+                        target="_blank"
+                        title={testimonialSlider[value].client}
                     >
-                        {`${testimonialSlider[value].client}`}
+                        {testimonialSlider[value].client}
                     </a>
                 ) : (
                     <span className={styles.userTitle}>
-                        {`${testimonialSlider[value].client}`}
+                        {testimonialSlider[value].client}
                     </span>
                 )}
             </div>

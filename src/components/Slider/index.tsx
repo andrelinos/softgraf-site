@@ -75,17 +75,14 @@ export function Slider() {
                 className={[styles.loadImage, styles.image, fadeClass].join(
                     ' '
                 )}
-                src={`${imageSlider[value].image}`}
-                alt={`${imageSlider[value].id}`}
+                src={imageSlider[value].image}
+                alt={imageSlider[value].title}
             />
             <div className={[styles.information].join(' ')}>
-                <span className={styles.title}>
-                    {`${imageSlider[value].title}`}
-                </span>
-                <p
-                    className={styles.text}
-                    max-lines={2}
-                >{`${imageSlider[value].text}`}</p>
+                <span className={styles.title}>{imageSlider[value].title}</span>
+                <p className={styles.text} max-lines={2}>
+                    {imageSlider[value].text}
+                </p>
             </div>
             <span
                 className={[styles.right, styles.buttons].join(' ')}
