@@ -74,7 +74,7 @@ export function About() {
                     <img src="./assets/images/support.png" />
                 </span>
                 <div>
-                    <h2>TECNOLOGIA DE PONTA</h2>
+                    <h2>SUPORTE</h2>
                     <p>
                         Nosso suporte é diferenciado. Além do treinamento na
                         implantação do ERP, nosso pós-venda oferece
